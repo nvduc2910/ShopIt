@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+  <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:background="@android:color/white"
+     android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+      <CustomTextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@android:color/transparent"
+          android:gravity="center_vertical"
+          android:hint="@string/TypeOfLicence"
+          android:padding="@dimen/marginBasex3"
+          android:textColor="@android:color/black"
+          android:textColorHint="@color/EditTextHintColor"
+          android:textSize="@dimen/textSmall"
+          local:textStyle="Regular" />
+
+      <CustomEditText
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="@dimen/marginBasex3"
+          android:layout_weight="1"
+          android:background="@android:color/transparent"
+             android:ellipsize="end"
+          android:gravity="center_vertical|right"
+          android:maxLines="1"
+          android:singleLine="true"
+          android:textColor="@android:color/black"
+          android:textSize="@dimen/textSmall"
+          local:MvxBind="Text CertItem.Descriptor"
+          local:textStyle="Regular" />
+    </LinearLayout>
+
+    <ImageView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:src="@drawable/box_divider_line"></ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+      <CustomTextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@android:color/transparent"
+          android:gravity="center_vertical"
+          android:hint="@string/ExpiryDate"
+          android:padding="@dimen/marginBasex3"
+          android:textColor="@android:color/black"
+          android:textColorHint="@color/EditTextHintColor"
+          android:textSize="@dimen/textSmall"
+          local:textStyle="Regular" />
+
+      <CustomTextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="@dimen/marginBasex2"
+          android:layout_weight="1"
+          android:background="@android:color/transparent"
+             android:ellipsize="end"
+          android:gravity="center_vertical|right"
+          android:maxLines="1"
+          android:singleLine="true"
+          android:textColor="@android:color/black"
+          android:textSize="@dimen/textSmall"
+          local:MvxBind="Text ExpiryText"
+          local:textStyle="Regular" />
+
+      <CustomImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_centerVertical="true"
+          android:layout_marginRight="@dimen/marginBasex2"
+          android:scaleType="fitCenter"
+          android:src="@drawable/ic_project_error"
+          android:layout_gravity="center_vertical"
+          local:MvxBind="IsChecked IsOverdue" />
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/bg_profile"
+      android:orientation="horizontal"
+      android:padding="@dimen/marginBasex3"
+      android:weightSum="11"
+      local:MvxBind="Click ViewDocumentCommand">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2" />
+
+    <CustomTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="9"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:hint="@string/ViewCertificate"
+        android:textColor="@color/TextGreenBlack"
+        android:textColorHint="@color/TextGreenBlack"
+        android:textSize="@dimen/textSmall"
+        local:textStyle="Bold" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:src="@drawable/green_foward_arrow" 
+        />
+  </LinearLayout>
+  </LinearLayout>
+
+
+</RelativeLayout>

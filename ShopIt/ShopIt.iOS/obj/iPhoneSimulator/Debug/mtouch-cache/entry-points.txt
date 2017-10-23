@@ -1,0 +1,63 @@
+Function=xamarin_timezone_get_data
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/mscorlib.dll
+Function=xamarin_GetFolderPath
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/mscorlib.dll
+Function=xamarin_log
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/mscorlib.dll
+Function=xamarin_get_block_descriptor
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/Xamarin.iOS.dll
+Function=xamarin_IntPtr_objc_msgSend_IntPtr
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/Xamarin.iOS.dll
+Function=xamarin_IntPtr_objc_msgSendSuper_IntPtr
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/Xamarin.iOS.dll
+Function=UIApplicationMain
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/Xamarin.iOS.dll
+Function=CreateZStream
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/System.dll
+Function=CloseZStream
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/System.dll
+Function=Flush
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/System.dll
+Function=ReadZStream
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/System.dll
+Function=WriteZStream
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/System.dll
+Function=xamarin_start_wwan
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/System.dll
+ObjectiveCClass=OBJC_CLASS_$_Mixpanel
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/Mixpanel.dll
+ObjectiveCClass=OBJC_CLASS_$_MixpanelPeople
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/Mixpanel.dll
+ObjectiveCClass=OBJC_CLASS_$_MBBackgroundView
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/MBProgressBinding.dll
+ObjectiveCClass=OBJC_CLASS_$_MBBarProgressView
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/MBProgressBinding.dll
+ObjectiveCClass=OBJC_CLASS_$_MBProgressHUD
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/MBProgressBinding.dll
+ObjectiveCClass=OBJC_CLASS_$_MBRoundProgressView
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/MBProgressBinding.dll
+ObjectiveCClass=OBJC_CLASS_$_SZTextView
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/SZTextViewBinding.dll
+Field=SDWebImageDownloadFinishNotification
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/SDWebImage.dll
+Field=SDWebImageDownloadReceiveResponseNotification
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/SDWebImage.dll
+Field=SDWebImageDownloadStartNotification
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/SDWebImage.dll
+Field=SDWebImageDownloadStopNotification
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/SDWebImage.dll
+ObjectiveCClass=OBJC_CLASS_$_SDWebImageDownloader
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/SDWebImage.dll
+ObjectiveCClass=OBJC_CLASS_$_SDWebImageDownloaderOperation
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/SDWebImage.dll
+ObjectiveCClass=OBJC_CLASS_$_SDWebImagePrefetcher
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/SDWebImage.dll
+ObjectiveCClass=OBJC_CLASS_$_SDImageCache
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/SDWebImage.dll
+ObjectiveCClass=OBJC_CLASS_$_SDWebImageManager
+	/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/Swapcerts/ShopIt.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/Link/SDWebImage.dll
+Function=mono_pmip
+Function=xamarin_dyn_objc_msgSend
+Function=xamarin_dyn_objc_msgSendSuper
+Function=xamarin_dyn_objc_msgSend_stret
+Function=xamarin_dyn_objc_msgSendSuper_stret

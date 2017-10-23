@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_sub_page">
+
+  <!--Top bar-->
+  <RelativeLayout
+      android:id="@+id/topbar"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/marginBasex10"
+      android:background="@drawable/bg_header"
+      android:paddingTop="@dimen/marginBasex2">
+    
+    <CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/AlertInvite"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textMedium"
+        local:textStyle="Regular" />
+
+    <ImageView
+        android:layout_width="@dimen/marginBasex10"
+        android:layout_height="@dimen/marginBasex10"
+        android:padding="@dimen/marginBasex2"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/marginBase"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_white_back_arrow"
+        local:MvxBind="Click GoBackCommand" />
+
+  </RelativeLayout>
+
+  
+
+  <RelativeLayout
+      android:id="@+id/joinProject"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/marginBasex10"
+      android:layout_marginTop="@dimen/marginBasex4"
+      android:layout_alignParentBottom="true"
+      android:background="@drawable/bg_header"
+      local:MvxBind="Click JoinProjectCommand">
+
+    <CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/JoinProject"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textMedium"
+        local:textStyle="Regular" />
+  </RelativeLayout>
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@id/joinProject"
+    android:layout_below="@id/topbar"
+    android:fillViewport="true">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+      <CustomTextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:layout_marginLeft="@dimen/marginBasex3"
+          android:layout_marginRight="@dimen/marginBasex3"
+          android:layout_marginTop="@dimen/marginBasex3"
+          android:text="@string/YouHaveBeenInvitedToJoin"
+          android:textColor="@color/Green"
+          android:textSize="@dimen/textMediumSmall"
+          local:textStyle="Bold" />
+
+      <CustomTextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:layout_marginLeft="@dimen/marginBasex3"
+          android:layout_marginRight="@dimen/marginBasex3"
+          android:layout_marginTop="@dimen/marginBasex3"
+          android:textColor="@android:color/black"
+          android:textSize="@dimen/textSmall"
+          local:textStyle="Regular" 
+          local:MvxBind="Text AlertItem.Alert.AlertProjectHeading.Title"/>
+
+      <CustomTextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:layout_marginLeft="@dimen/marginBasex3"
+          android:layout_marginRight="@dimen/marginBasex3"
+          android:layout_marginTop="@dimen/marginBasex3"
+          android:text="@string/Description"
+          android:textColor="@color/Green"
+          android:textSize="@dimen/textMediumSmall"
+          local:textStyle="Bold" />
+
+      <CustomTextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:layout_marginLeft="@dimen/marginBasex3"
+          android:layout_marginRight="@dimen/marginBasex3"
+          android:layout_marginTop="@dimen/marginBasex3"
+          android:textColor="@android:color/black"
+          android:textSize="@dimen/textSmall"
+          local:textStyle="Regular"
+          local:MvxBind="Text AlertItem.Alert.AlertProjectHeading.Description"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="@dimen/marginBasex3"
+          android:layout_marginRight="@dimen/marginBasex3"
+          android:layout_marginTop="@dimen/marginBasex3"
+          android:orientation="horizontal">
+
+        <CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/marginBasex2"
+            android:text="@string/StageUpcase"
+            android:textColor="@color/Green"
+            android:textSize="@dimen/textMediumSmall"
+            local:textStyle="Bold" />
+
+        <CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSmall"
+            local:textStyle="Regular" 
+            local:MvxBind="Text AlertItem.Alert.AlertProjectHeading.Stage"/>
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="@dimen/marginBasex2"
+          android:layout_marginRight="@dimen/marginBasex2"
+          android:layout_marginTop="@dimen/marginBasex3"
+          android:background="@drawable/bg_box"
+          android:orientation="vertical"
+          android:paddingBottom="@dimen/marginBasex3"
+          android:paddingTop="@dimen/marginBasex2">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginBasex2"
+            android:layout_marginRight="@dimen/marginBasex2"
+            android:orientation="horizontal">
+
+          <CustomTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="@dimen/marginBase"
+              android:text="@string/ProjectCreator"
+              android:textColor="@color/Green"
+              android:textSize="@dimen/textMediumSmall"
+              local:textStyle="Bold" />
+
+          <CustomTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerInParent="true"
+              android:textColor="@android:color/black"
+              android:textSize="@dimen/textSmall"
+              local:textStyle="Regular"
+              />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/marginBasex2"
+            android:layout_marginTop="@dimen/marginBasex2"
+            android:src="@drawable/divider_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/marginBasex2"
+            android:layout_marginLeft="@dimen/marginBasex2"
+            android:layout_marginRight="@dimen/marginBasex2"
+            android:orientation="horizontal">
+
+          <CustomTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="@dimen/marginBase"
+              android:text="@string/Company"
+              android:textColor="@color/Green"
+              android:textSize="@dimen/textSmall"
+              local:textStyle="Bold" />
+
+          <CustomTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerInParent="true"
+              android:textColor="@color/Green"
+              android:textSize="@dimen/textSmall"
+              local:textStyle="Regular" 
+              local:MvxBind="Text AlertItem.Alert.AlertProjectHeading.ProjectOwner.CompanyName"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/marginBasex2"
+            android:layout_marginLeft="@dimen/marginBasex2"
+            android:layout_marginRight="@dimen/marginBasex2"
+            android:orientation="horizontal">
+
+          <CustomTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="@dimen/marginBasex2"
+              android:text="@string/Mobile"
+              android:textColor="@android:color/black"
+              android:textSize="@dimen/textSmall"
+              local:textStyle="Bold" />
+
+          <CustomTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerInParent="true"
+              android:textColor="@color/Grey"
+              android:textSize="@dimen/textSmall"
+              local:textStyle="Regular"
+              local:MvxBind="Text AlertItem.Alert.AlertProjectHeading.ProjectOwner.Mobile"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/marginBasex2"
+            android:layout_marginLeft="@dimen/marginBasex2"
+            android:layout_marginRight="@dimen/marginBasex2"
+            android:orientation="horizontal">
+
+          <CustomTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="@dimen/marginBasex2"
+              android:text="@string/AlertInviteEmail"
+              android:textColor="@android:color/black"
+              android:textSize="@dimen/textSmall"
+              local:textStyle="Bold" />
+
+          <CustomTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerInParent="true"
+              android:textColor="@color/Grey"
+              android:textSize="@dimen/textSmall"
+              local:textStyle="Regular"
+              local:MvxBind="Text AlertItem.Alert.AlertProjectHeading.ProjectOwner.Email"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/marginBasex2"
+            android:layout_marginLeft="@dimen/marginBasex2"
+            android:layout_marginRight="@dimen/marginBasex2"
+            android:orientation="horizontal">
+
+          <CustomTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="@dimen/marginBasex2"
+              android:text="@string/Address"
+              android:textColor="@android:color/black"
+              android:textSize="@dimen/textSmall"
+              local:textStyle="Bold" />
+
+          <CustomTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerInParent="true"
+              android:textColor="@color/Grey"
+              android:textSize="@dimen/textSmall"
+              local:textStyle="Regular"
+              local:MvxBind="Text AlertItem.Alert.AlertProjectHeading.ProjectOwner.Address"/>
+        </LinearLayout>
+
+      </LinearLayout>
+    </LinearLayout>
+
+  </ScrollView>
+
+</RelativeLayout>

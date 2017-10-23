@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{6885FF35-FF84-4E85-8851-9836E27FEB5E}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ShopIt.iOS/AppDelegate.cs">
+    <Files>
+      <File FileName="ShopIt.iOS/AppDelegate.cs" Line="8" Column="14" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ShopIt" expanded="True">
+            <Node name="0 - Core" expanded="True">
+              <Node name="ShopIt.Core" expanded="True" />
+            </Node>
+            <Node name="1 - Android" expanded="True">
+              <Node name="ShopIt.Droid" expanded="True" selected="True">
+                <Node name="References" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="2 - iOS" expanded="True">
+              <Node name="ShopIt.iOS" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.1_220-_220Android.ShopIt.Droid PreferredExecutionTarget="Android.Android_Accelerated_Nougat" />
+  <MultiItemStartupConfigurations />
+</Properties>

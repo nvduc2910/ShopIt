@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DocumentsView">
+            <connections>
+                <outlet property="btnAdd" destination="VZf-ql-BFi" id="cS8-Ei-kxb"/>
+                <outlet property="btnBack" destination="7l2-2m-Nlo" id="ORN-Xj-Ap2"/>
+                <outlet property="colDocuments" destination="wqn-F3-uP8" id="JoB-sJ-Qet"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yoR-ht-Q0f">
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7l2-2m-Nlo">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="52" id="kYw-Ej-cih"/>
+                            </constraints>
+                            <state key="normal" image="Back-arrow-green"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZf-ql-BFi">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="49" id="B3k-r6-dO4"/>
+                            </constraints>
+                            <state key="normal" image="Add-photos"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Certificates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ko-xL-xoQ">
+                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="19"/>
+                            <color key="textColor" red="0.0" green="0.76078431372549016" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="VZf-ql-BFi" secondAttribute="trailing" id="0Tq-sH-22g"/>
+                        <constraint firstAttribute="height" constant="47" id="BNJ-XD-mLu"/>
+                        <constraint firstAttribute="bottom" secondItem="VZf-ql-BFi" secondAttribute="bottom" id="Cg9-lO-v93"/>
+                        <constraint firstItem="8ko-xL-xoQ" firstAttribute="centerX" secondItem="yoR-ht-Q0f" secondAttribute="centerX" id="MoG-Ie-mF4"/>
+                        <constraint firstAttribute="bottom" secondItem="7l2-2m-Nlo" secondAttribute="bottom" id="Sxa-vn-JwK"/>
+                        <constraint firstItem="8ko-xL-xoQ" firstAttribute="centerY" secondItem="yoR-ht-Q0f" secondAttribute="centerY" id="VD1-Cc-diA"/>
+                        <constraint firstItem="VZf-ql-BFi" firstAttribute="top" secondItem="yoR-ht-Q0f" secondAttribute="top" id="cUy-9V-sPs"/>
+                        <constraint firstItem="7l2-2m-Nlo" firstAttribute="top" secondItem="yoR-ht-Q0f" secondAttribute="top" id="fTI-jt-5bR"/>
+                        <constraint firstItem="7l2-2m-Nlo" firstAttribute="leading" secondItem="yoR-ht-Q0f" secondAttribute="leading" id="j9M-vv-7Tc"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jxR-yc-iwM">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FILES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5z-Zb-kBr">
+                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
+                            <color key="textColor" red="0.22583571076393127" green="0.76349532604217529" blue="0.46221709251403809" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wqn-F3-uP8">
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="eio-wq-33N">
+                                <size key="itemSize" width="197" height="197"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="V5z-Zb-kBr" firstAttribute="leading" secondItem="jxR-yc-iwM" secondAttribute="leading" constant="12" id="7WE-YN-qJl"/>
+                        <constraint firstItem="wqn-F3-uP8" firstAttribute="top" secondItem="V5z-Zb-kBr" secondAttribute="bottom" constant="8" id="Gac-NT-kKd"/>
+                        <constraint firstAttribute="trailing" secondItem="wqn-F3-uP8" secondAttribute="trailing" id="LJz-lP-aNL"/>
+                        <constraint firstItem="V5z-Zb-kBr" firstAttribute="top" secondItem="jxR-yc-iwM" secondAttribute="top" constant="15" id="WHn-KJ-oZo"/>
+                        <constraint firstItem="wqn-F3-uP8" firstAttribute="leading" secondItem="jxR-yc-iwM" secondAttribute="leading" id="lVd-w0-fid"/>
+                        <constraint firstAttribute="bottom" secondItem="wqn-F3-uP8" secondAttribute="bottom" id="pJS-xq-Q7M"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yoR-ht-Q0f" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="94E-Qd-5kQ"/>
+                <constraint firstAttribute="trailing" secondItem="yoR-ht-Q0f" secondAttribute="trailing" id="EXA-Wr-Dev"/>
+                <constraint firstItem="jxR-yc-iwM" firstAttribute="top" secondItem="yoR-ht-Q0f" secondAttribute="bottom" id="XFT-I4-GRI"/>
+                <constraint firstItem="jxR-yc-iwM" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="Y46-6G-RWd"/>
+                <constraint firstItem="yoR-ht-Q0f" firstAttribute="top" secondItem="2" secondAttribute="top" constant="24" id="a94-ef-9rI"/>
+                <constraint firstAttribute="trailing" secondItem="jxR-yc-iwM" secondAttribute="trailing" id="fpu-Wy-Cg8"/>
+                <constraint firstAttribute="bottom" secondItem="jxR-yc-iwM" secondAttribute="bottom" id="g1k-IX-5Az"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="Add-photos" width="21" height="21"/>
+        <image name="Back-arrow-green" width="10" height="19"/>
+    </resources>
+</document>

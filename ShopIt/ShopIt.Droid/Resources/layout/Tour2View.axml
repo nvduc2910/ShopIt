@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:scaleType="fitXY"
+      android:src="@drawable/sc_tour_2" />
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+      <CustomTextView
+          android:id="@+id/tvTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="@dimen/marginBasex4"
+          android:textColor="#ffffff"
+          android:textSize="@dimen/textMediumLarge"
+          android:text="@string/InviteTrades"
+          local:textStyle="Regular" />
+      <CustomTextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:layout_above="@+id/pagerIndicator"
+          android:gravity="center_horizontal"
+          android:layout_below="@+id/tvTitle"
+          android:textColor="#ffffff"
+          android:textSize="@dimen/textMedium"
+          android:layout_marginTop="@dimen/marginBasex4"
+          android:layout_marginBottom="@dimen/marginBasex4"
+          android:text="@string/InviteTradesContent"
+          local:textStyle="Regular" />
+      <LinearLayout
+          android:id="@+id/pagerIndicator"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/btnSkipOrDone"
+          android:layout_centerHorizontal="true"
+          android:layout_marginBottom="@dimen/marginBasex8"
+          android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginBase"
+            android:layout_marginRight="@dimen/marginBase"
+            android:src="@drawable/sc_tour_non_selected_dot" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginBase"
+            android:layout_marginRight="@dimen/marginBase"
+            android:src="@drawable/sc_tour_selected_dot" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginBase"
+            android:layout_marginRight="@dimen/marginBase"
+            android:src="@drawable/sc_tour_non_selected_dot" />
+      </LinearLayout>
+      <CustomTextView
+          android:id="@+id/btnSkipOrDone"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_centerHorizontal="true"
+          android:layout_marginBottom="@dimen/marginBasex8"
+          android:textColor="#ffffff"
+          android:textSize="@dimen/textMedium"
+          local:MvxBind="Click SkipCommand;Text ButtonTitle"
+          local:textStyle="Regular" />
+    </RelativeLayout>
+  </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,2 @@
+/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/ShopIt/ShopIt.Droid/obj/Debug/ShopIt.Core.csprojResolveAssemblyReference.cache
+/Users/apple/Downloads/envisageapps-sc-app-132a173dcd49/ShopIt/ShopIt.Droid/obj/Debug/ShopIt.Core.csproj.CoreCompileInputs.cache

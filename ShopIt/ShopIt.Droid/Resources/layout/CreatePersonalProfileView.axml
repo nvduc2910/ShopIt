@@ -1,0 +1,1046 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_grey"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <!--Top bar-->
+    <RelativeLayout
+        android:id="@+id/step"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/marginBasex10"
+        android:background="@drawable/bg_header"
+        android:paddingTop="@dimen/marginBasex2">
+
+        <CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/PersonalProfile"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textMedium"
+            local:textStyle="Regular" />
+
+        <ImageView
+            android:layout_width="@dimen/marginBasex10"
+            android:layout_height="@dimen/marginBasex10"
+            android:padding="@dimen/marginBasex2"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/marginBase"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_white_back_arrow"
+            local:MvxBind="Click ShowBackStepCommand" />
+
+        <CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/marginBasex3"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textMediumSmall"
+            local:MvxBind="Click ShowNextCommand;Text TitleButtonNext"
+            local:textStyle="Bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+      
+        android:id="@+id/stephightlight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Green"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/marginBase"
+        android:paddingTop="@dimen/marginBasex2">
+
+        <CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/marginBase"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textSmall"
+            local:MvxBind="Text TitleStep"
+            local:textStyle="Regular" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginBase"
+            android:layout_marginRight="@dimen/marginBase"
+            android:orientation="horizontal">
+
+            <ProfileStep
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/marginBase"
+                android:layout_marginRight="@dimen/marginBase"
+                android:layout_weight="1"
+                android:src="@drawable/ic_progress_bar_not_filled"
+                local:MvxBind="IsSelected IsStep1" />
+
+            <ProfileStep
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/marginBase"
+                android:layout_marginRight="@dimen/marginBase"
+                android:layout_weight="1"
+                android:src="@drawable/ic_progress_bar_not_filled"
+                local:MvxBind="IsSelected IsStep2" />
+
+            <ProfileStep
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/marginBase"
+                android:layout_marginRight="@dimen/marginBase"
+                android:layout_weight="1"
+                android:src="@drawable/ic_progress_bar_not_filled"
+                local:MvxBind="IsSelected IsStep3" />
+
+            <ProfileStep
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/marginBase"
+                android:layout_marginRight="@dimen/marginBase"
+                android:layout_weight="1"
+                android:src="@drawable/ic_progress_bar_not_filled"
+                local:MvxBind="IsSelected IsStep4" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--Step 1-->
+            <LinearLayout
+                android:id="@+id/lnStep1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/marginBasex2">
+
+                <CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/marginBase"
+                    android:layout_marginTop="@dimen/marginBase"
+                    android:text="@string/GeneralDetails"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textSmall" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <CustomEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/FirstName"
+                        android:inputType="textCapWords"
+                        android:padding="@dimen/marginBasex3"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/EditTextHintColor"
+                        android:textSize="@dimen/textSmall"
+                        local:MvxBind="Text FirstName"
+                        local:textStyle="Regular" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/box_divider_line"></ImageView>
+
+                    <CustomEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/LastName"
+                        android:padding="@dimen/marginBasex3"
+                        android:inputType="textCapWords"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/EditTextHintColor"
+                        android:textSize="@dimen/textSmall"
+                        local:MvxBind="Text LastName"
+                        local:textStyle="Regular" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/box_divider_line"></ImageView>
+
+                    <CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/DOB"
+                        android:inputType="none"
+                        android:padding="@dimen/marginBasex3"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/EditTextHintColor"
+                        android:textSize="@dimen/textSmall"
+                        local:MvxBind="Click DOBCommand;Text DOBText"
+                        local:textStyle="Regular" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/box_divider_line"></ImageView>
+
+                    <CustomEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/MobileNumber"
+                        android:inputType="phone"
+                        android:padding="@dimen/marginBasex3"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/EditTextHintColor"
+                        android:textSize="@dimen/textSmall"
+                        local:MvxBind="Text MobileNumber"
+                        local:textStyle="Regular" />
+                </LinearLayout>
+
+                <CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/marginBase"
+                    android:layout_marginTop="@dimen/marginBase"
+                    android:text="@string/AddressTitle"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textSmall" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <CustomEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/UnitDwellingNumber"
+                        android:inputType="textCapWords"
+                        android:padding="@dimen/marginBasex3"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/EditTextHintColor"
+                        android:textSize="@dimen/textSmall"
+                        local:MvxBind="Text UnitNumber"
+                        local:textStyle="Regular" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/box_divider_line"></ImageView>
+
+                    <CustomEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/StreetName"
+                        android:padding="@dimen/marginBasex3"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/EditTextHintColor"
+                        android:textSize="@dimen/textSmall"
+                        local:MvxBind="Text StreetName"
+                        android:inputType="textCapWords"
+                        local:textStyle="Regular" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/box_divider_line"></ImageView>
+
+                    <CustomEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/Postcode"
+                        android:inputType="number"
+                        android:padding="@dimen/marginBasex3"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/EditTextHintColor"
+                        android:textSize="@dimen/textSmall"
+                        local:MvxBind="Text PostCode"
+                        local:textStyle="Regular" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/box_divider_line"></ImageView>
+
+                    <CustomEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/SuburbState"
+                        android:padding="@dimen/marginBasex3"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/EditTextHintColor"
+                        android:inputType="textCapCharacters"
+                        android:textSize="@dimen/textSmall"
+                        local:MvxBind="Text State"
+                        local:textStyle="Regular" />
+                </LinearLayout>
+
+                <CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/marginBase"
+                    android:layout_marginTop="@dimen/marginBase"
+                    android:text="@string/NextOfKinDetails"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textSmall"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <CustomEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/FullName"
+                        android:padding="@dimen/marginBasex3"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/EditTextHintColor"
+                        android:textSize="@dimen/textSmall"
+                        local:MvxBind="Text NOK"
+                        android:inputType="textCapWords"
+                        local:textStyle="Regular" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/box_divider_line"></ImageView>
+
+                    <CustomEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/ContactNumber"
+                        android:inputType="phone"
+                        android:padding="@dimen/marginBasex3"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/EditTextHintColor"
+                        android:textSize="@dimen/textSmall"
+                        local:MvxBind="Text NOKPhone"
+                        local:textStyle="Regular" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--Step 2-->
+            <LinearLayout
+                android:id="@+id/lnStep2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/marginBase"
+                    android:layout_marginTop="@dimen/marginBase"
+                    android:text="@string/ConstructionInductionCard"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textSmall"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/marginBasex2">
+
+                    <CustomEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/CardNumber"
+                        android:padding="@dimen/marginBasex3"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/EditTextHintColor"
+                        android:textSize="@dimen/textSmall"
+                        android:inputType="textCapCharacters"
+                        local:MvxBind="Text ConstructionCardItem.CertItem.Identifier"
+                        local:textStyle="Regular" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/box_divider_line"></ImageView>
+
+                    <CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/marginBasex2"
+                        android:layout_marginTop="@dimen/marginBasex3"
+                        android:text="@string/TakePhotoOfCard"
+                        android:textColor="@color/Green"
+                        android:textSize="@dimen/textSmall"
+                        local:textStyle="Bold" />
+
+                    <BindableImageView
+                        android:layout_width="@dimen/marginBasex35"
+                        android:layout_height="@dimen/marginBasex35"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/marginBasex2"
+                        android:src="@drawable/ic_add_photo"
+                        local:MvxBind="Click ConstructionCardItem.ChooseCertPhotoCommand;ImageLocal ConstructionCardItem.CertItem.Document.LocalMedia" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Step 3-->
+            <LinearLayout
+                android:id="@+id/lnStep3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/marginBasex2"
+                    android:paddingTop="@dimen/marginBasex2">
+
+                    <CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/marginBase"
+                        android:layout_marginTop="@dimen/marginBase"
+                        android:text="@string/FillOutBelowIfApplicableOtherwiseTapNext"
+                        android:textColor="@color/Green"
+                        android:textSize="@dimen/textSmall"
+                        local:textStyle="Regular" />
+
+                </LinearLayout>
+
+                <CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/marginBase"
+                    android:layout_marginTop="@dimen/marginBase"
+                    android:text="@string/TradeContractorLicence"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textSmall"
+                    local:textStyle="Regular" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/marginBasex2">
+
+                    <CustomEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/TypeOfTrade"
+                        android:padding="@dimen/marginBasex3"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/EditTextHintColor"
+                        android:textSize="@dimen/textSmall"
+                        android:inputType="textCapWords"
+                        local:MvxBind="Text TraceLicenseItem.CertItem.Descriptor"
+                        local:textStyle="Regular" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/box_divider_line"></ImageView>
+
+                    <CustomEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/TradeLicenceNumber"
+                        android:padding="@dimen/marginBasex3"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/EditTextHintColor"
+                        android:textSize="@dimen/textSmall"
+                        android:inputType="textCapCharacters"
+                        local:MvxBind="Text TraceLicenseItem.CertItem.Identifier"
+                        local:textStyle="Regular" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/box_divider_line"></ImageView>
+
+                    <CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/TradeLicenceExpiry"
+                        android:padding="@dimen/marginBasex3"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/EditTextHintColor"
+                        android:textSize="@dimen/textSmall"
+                        local:MvxBind="Click TraceLicenseItem.SetPersonalExpiryCommand;Text TraceLicenseItem.ExpiryText"
+                        local:textStyle="Regular" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/box_divider_line"></ImageView>
+
+
+                    <CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/marginBasex2"
+                        android:layout_marginTop="@dimen/marginBasex3"
+                        android:text="@string/TakePhotoOfLicence"
+                        android:textColor="@color/Green"
+                        android:textSize="@dimen/textSmall"
+                        local:textStyle="Bold" />
+
+                    <BindableImageView
+                        android:layout_width="@dimen/marginBasex35"
+                        android:layout_height="@dimen/marginBasex35"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/marginBasex2"
+                        android:src="@drawable/ic_add_photo"
+                        local:MvxBind="Click TraceLicenseItem.ChooseCertPhotoCommand;ImageLocal TraceLicenseItem.CertItem.Document.LocalMedia" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Step 4-->
+            <LinearLayout
+                android:id="@+id/lnStep4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/marginBasex2"
+                    android:paddingTop="@dimen/marginBasex2">
+
+                    <CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/marginBase"
+                        android:layout_marginTop="@dimen/marginBase"
+                        android:text="@string/FillOutBelowIfApplicableOtherwiseTapDone"
+                        android:textColor="@color/Green"
+                        android:textSize="@dimen/textSmall"
+                        local:textStyle="Regular" />
+
+                </LinearLayout>
+
+                <CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/marginBase"
+                    android:layout_marginTop="@dimen/marginBase"
+                    android:text="@string/TickIfYouAreTheFollowing"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textSmall"
+                    local:textStyle="Regular" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:padding="@dimen/marginBasex3"
+                            android:text="@string/IncomeInsured"
+                            android:textColor="@color/EditTextHintColor"
+                            android:textSize="@dimen/textSmall"
+                            local:textStyle="Regular" />
+
+                        <CustomCheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/marginBasex2"
+                            android:src="@drawable/ic_check_outline"
+                            local:MvxBind="Click TickIncomeInsuredCommand;IsChecked IsTickIncomeInsured"></CustomCheckBox>
+                    </RelativeLayout>
+
+                  <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    local:MvxBind="Visible IsTickIncomeInsured"
+                    android:orientation="vertical">
+                      <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/box_divider_line"></ImageView>
+
+                      <CustomTextView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:background="@android:color/transparent"
+                          android:gravity="center_vertical"
+                          android:hint="@string/CardExpiry"
+                          android:padding="@dimen/marginBasex3"
+                          android:textColor="@android:color/black"
+                          android:textColorHint="@color/EditTextHintColor"
+                          android:textSize="@dimen/textSmall"
+                          local:MvxBind="Click IncomeInsured.SetPersonalExpiryCommand;Text IncomeInsured.ExpiryText"
+                          local:textStyle="Regular" />
+
+                      <ImageView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:src="@drawable/box_divider_line"></ImageView>
+
+                      <CustomTextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center_horizontal"
+                          android:layout_marginBottom="@dimen/marginBasex2"
+                          android:layout_marginTop="@dimen/marginBasex3"
+                          android:text="@string/TakePhotoOfDocument"
+                          android:textColor="@color/Green"
+                          android:textSize="@dimen/textSmall"
+                          local:textStyle="Bold" />
+
+                      <BindableImageView
+                          android:layout_width="@dimen/marginBasex35"
+                          android:layout_height="@dimen/marginBasex35"
+                          android:layout_gravity="center_horizontal"
+                          android:layout_marginBottom="@dimen/marginBasex2"
+                          android:src="@drawable/ic_add_photo"
+                          local:MvxBind="Click IncomeInsured.ChooseCertPhotoCommand;ImageLocal IncomeInsured.CertItem.Document.LocalMedia" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/box_divider_line"></ImageView>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:padding="@dimen/marginBasex3"
+                            android:text="@string/FirstAidCertified"
+                            android:textColor="@color/EditTextHintColor"
+                            android:textSize="@dimen/textSmall" />
+
+                        <CustomCheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/marginBasex2"
+                            android:src="@drawable/ic_check_outline"
+                            local:MvxBind="Click TickFirstAidCertCommand;IsChecked IsTickFirstAid"></CustomCheckBox>
+
+                    </RelativeLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:background="@android:color/white"
+                      local:MvxBind="Visible IsTickFirstAid"
+                      android:orientation="vertical">
+                      <ImageView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:src="@drawable/box_divider_line"></ImageView>
+
+                      <CustomTextView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:background="@android:color/transparent"
+                          android:gravity="center_vertical"
+                          android:hint="@string/CardExpiry"
+                          android:padding="@dimen/marginBasex3"
+                          android:textColor="@android:color/black"
+                          android:textColorHint="@color/EditTextHintColor"
+                          android:textSize="@dimen/textSmall"
+                          local:MvxBind="Click FirstAidCertified.SetPersonalExpiryCommand;Text FirstAidCertified.ExpiryText"
+                          local:textStyle="Regular" />
+
+                      <ImageView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:src="@drawable/box_divider_line"></ImageView>
+
+                      <CustomTextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center_horizontal"
+                          android:layout_marginBottom="@dimen/marginBasex2"
+                          android:layout_marginTop="@dimen/marginBasex3"
+                          android:text="@string/TakePhotoOfDocument"
+                          android:textColor="@color/Green"
+                          android:textSize="@dimen/textSmall"
+                          local:textStyle="Bold" />
+
+                      <BindableImageView
+                          android:layout_width="@dimen/marginBasex35"
+                          android:layout_height="@dimen/marginBasex35"
+                          android:layout_gravity="center_horizontal"
+                          android:layout_marginBottom="@dimen/marginBasex2"
+                          android:src="@drawable/ic_add_photo"
+                          local:MvxBind="Click FirstAidCertified.ChooseCertPhotoCommand;ImageLocal FirstAidCertified.CertItem.Document.LocalMedia" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/box_divider_line"></ImageView>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:padding="@dimen/marginBasex3"
+                            android:text="@string/GSTRegistered"
+                            android:textColor="@color/EditTextHintColor"
+                            android:textSize="@dimen/textSmall"
+                            local:textStyle="Regular" />
+
+                        <CustomCheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/marginBasex2"
+                            android:src="@drawable/ic_check_outline"
+                            local:MvxBind="Click TickGSTRegisteredCommand;IsChecked IsTickGSTRegistered"></CustomCheckBox>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/box_divider_line"></ImageView>
+                  <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:padding="@dimen/marginBasex3"
+                        android:text="@string/PublicLiability"
+                        android:textColor="@color/EditTextHintColor"
+                        android:textSize="@dimen/textSmall"
+                        local:textStyle="Regular" />
+
+                    <CustomCheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/marginBasex2"
+                        android:src="@drawable/ic_check_outline"
+                        local:MvxBind="Click TickPublicLiabilityCommand;IsChecked IsTickPublicLiability"></CustomCheckBox>
+
+                  </RelativeLayout>
+                  
+                  <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    local:MvxBind="Visible IsTickPublicLiability"
+                    android:orientation="vertical">
+                      <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/box_divider_line"></ImageView>
+
+                      <CustomTextView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:background="@android:color/transparent"
+                          android:gravity="center_vertical"
+                          android:hint="@string/CardExpiry"
+                          android:padding="@dimen/marginBasex3"
+                          android:textColor="@android:color/black"
+                          android:textColorHint="@color/EditTextHintColor"
+                          android:textSize="@dimen/textSmall"
+                          local:MvxBind="Click PublicLiablityCert.SetPersonalExpiryCommand;Text PublicLiablityCert.ExpiryText"
+                          local:textStyle="Regular" />
+
+                      <ImageView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:src="@drawable/box_divider_line"></ImageView>
+
+                      <CustomTextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center_horizontal"
+                          android:layout_marginBottom="@dimen/marginBasex2"
+                          android:layout_marginTop="@dimen/marginBasex3"
+                          android:text="@string/TakePhotoOfDocument"
+                          android:textColor="@color/Green"
+                          android:textSize="@dimen/textSmall"
+                          local:textStyle="Bold" />
+
+                      <BindableImageView
+                          android:layout_width="@dimen/marginBasex35"
+                          android:layout_height="@dimen/marginBasex35"
+                          android:layout_gravity="center_horizontal"
+                          android:layout_marginBottom="@dimen/marginBasex2"
+                          android:src="@drawable/ic_add_photo"
+                          local:MvxBind="Click PublicLiablityCert.ChooseCertPhotoCommand;ImageLocal PublicLiablityCert.CertItem.Document.LocalMedia" />
+                  </LinearLayout>
+
+                  <ImageView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:src="@drawable/box_divider_line"></ImageView>
+
+                </LinearLayout>
+
+                <CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/marginBase"
+                    android:text="OTHER CERTIFICATES"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textSmall"
+                    local:textStyle="Regular" />
+
+                <MvxLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    local:MvxBind="ItemsSource OperationalCerts"
+                    local:MvxItemTemplate="@layout/operationalcertitem" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white">
+                    <CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/marginBasex3"
+                        android:text="@string/TapToAddAnotherCertificate"
+                        android:textColor="@color/EditTextHintColor"
+                        android:textSize="@dimen/textSmall"
+                        local:textStyle="Regular" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/marginBasex2"
+                        android:src="@drawable/ic_add_document"
+                        local:MvxBind="Click TapToAddOperationalCertCommand"></ImageView>
+
+                </RelativeLayout>
+
+                <CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/marginBase"
+                    android:layout_marginTop="@dimen/marginBase"
+                    android:text="@string/Verify"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textSmall"
+                    local:textStyle="Regular" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/marginBasex2">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:padding="@dimen/marginBasex3"
+                            android:text="@string/IVeRifyThisInfomationIsTrue"
+                            android:textColor="@color/EditTextHintColor"
+                            android:textSize="@dimen/textSmall"
+                            local:textStyle="Regular" />
+
+                        <CustomCheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/marginBasex2"
+                            android:src="@drawable/ic_check_outline"
+                            local:MvxBind="Click VerifyCommand;IsChecked IsVerify"/>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/box_divider_line"></ImageView>
+                </LinearLayout>
+
+            </LinearLayout>
+          
+          
+        </RelativeLayout>
+    </ScrollView>
+          <!--Complete-->
+          <LinearLayout
+            android:id="@+id/complete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"           
+            android:weightSum="2">
+            
+              <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+                 <ImageView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="right"
+                  android:layout_marginRight="@dimen/marginBasex2"
+                  android:layout_marginTop="@dimen/marginBasex2"
+                  android:src="@drawable/ic_remove_item"
+                  local:MvxBind="Click CloseCommand"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                  <ImageView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:src="@drawable/ic_complete_profile"/>
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/marginBasex2"
+                      android:text="@string/PersonalProfileComplete"
+                      android:textColor="@color/Green"
+                      local:textStyle="Bold"/>
+                </LinearLayout>
+            </FrameLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@color/Green"
+                    android:orientation="vertical">
+                  <ImageView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:src="@drawable/ic_company_profile" />
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="@dimen/marginBasex17"
+                      android:layout_marginRight="@dimen/marginBasex17"
+                      android:gravity="center"
+                      android:layout_marginTop="@dimen/marginBasex2"
+                      android:text="@string/IfYouAreACompanyPleaseProceedToFillOutYourCompanyDetails"
+                      android:textColor="@android:color/white"/>
+                  <Button
+                      android:layout_width="match_parent"
+                      android:layout_height="@dimen/textHeaderx1.5"
+                      android:layout_marginLeft="@dimen/marginBasex10"
+                      android:layout_marginRight="@dimen/marginBasex10"
+                      android:layout_marginTop="@dimen/marginBasex2"
+                      android:text="@string/CreateCompanyProfile"
+                      android:textColor="@android:color/white"
+                      android:background="@drawable/bg_white_button"
+                      local:MvxBind="Click CreateCompanyProfileCommand"/>
+            </LinearLayout>
+          </LinearLayout>
+    
+</LinearLayout>

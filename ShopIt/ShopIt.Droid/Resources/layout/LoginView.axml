@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_grey"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/marginBasex10"
+            android:layout_marginTop="@dimen/marginBasex10"
+            android:src="@drawable/logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/marginBasex8"
+            android:paddingRight="@dimen/marginBasex8">
+
+            <CustomEditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/marginBasex6"
+                android:background="@android:color/transparent"
+                android:gravity="center_horizontal"
+                android:hint="@string/Email"
+                android:inputType="textEmailAddress"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/EditTextHintColor"
+                android:textSize="@dimen/textMedium"
+                local:textStyle="Regular"
+                local:MvxBind="Text Email"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginBasex4"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/marginBasex8"
+            android:paddingRight="@dimen/marginBasex8">
+
+            <CustomEditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/marginBasex6"
+                android:background="@android:color/transparent"
+                android:gravity="center_horizontal"
+                android:hint="@string/Password"
+                android:inputType="textPassword"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/EditTextHintColor"
+                android:textSize="@dimen/textMedium"
+                local:textStyle="Regular" 
+                local:MvxBind="Text Password"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/line" />
+        </LinearLayout>
+
+        <CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginBasex3"
+            android:gravity="center_horizontal"
+            android:text="@string/ForgotPassword"
+            android:textColor="@color/Grey"
+            android:textSize="@dimen/textMedium"
+            local:textStyle="Bold"
+            local:MvxBind="Click ForgotPasswordCommand"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/marginBasex4"
+            android:layout_marginLeft="@dimen/marginBasex10"
+            android:layout_marginRight="@dimen/marginBasex10"
+            android:layout_marginTop="@dimen/marginBasex4"
+            android:background="@drawable/btn_green_outline"
+            local:MvxBind="Click SignInCommand">
+
+            <CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:text="@string/SignIn"
+                android:textColor="@color/Green"
+                android:textSize="@dimen/textMedium"
+                local:textStyle="Bold" />
+        </RelativeLayout>
+
+        <CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/Sign"
+            android:textColor="@color/Green"
+            android:textSize="@dimen/textMedium"
+            local:textStyle="Regular" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/TermOfService"
+                android:textColor="@color/Green"
+                android:textSize="@dimen/textMedium"
+                local:textStyle="Bold"
+                local:MvxBind="Click TermsOfServiceCommand"/>
+
+            <CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/marginBase"
+                android:layout_marginRight="@dimen/marginBase"
+                android:text="and"
+                android:textColor="@color/Green"
+                android:textSize="@dimen/textMedium"
+                local:textStyle="Regular" />
+
+            <CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PrivacyPolicy"
+                android:textColor="@color/Green"
+                android:textSize="@dimen/textMedium"
+                local:textStyle="Bold" 
+                local:MvxBind="Click PrivacyPolicyCommand"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    
+
+    <!--Forgot Password Dialog-->
+  <LinearLayout
+        android:id="@+id/lnForgotPasswordDialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/marginBasex2"
+            android:layout_marginRight="@dimen/marginBasex2"
+            android:layout_weight="6"
+            android:background="@drawable/bg_forgot_password">
+
+            <CustomTextView
+                android:id="@+id/tvForgotPasswordTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/marginBasex2"
+                android:layout_marginTop="@dimen/marginBasex3"
+                android:text="@string/ForgotPasswordTitle"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textMediumLarge"
+                local:textStyle="Regular" />
+
+            <CustomTextView
+                android:id="@+id/tvForgotPasswordDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvForgotPasswordTitle"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/marginBasex5"
+                android:text="@string/InviteTradesContent"
+                android:textColor="@color/Grey"
+                android:textSize="@dimen/textMedium"
+                local:textStyle="Regular" />
+
+            <LinearLayout
+                android:id="@+id/lnForgotPasswordEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvForgotPasswordDesc"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/marginBasex6"
+                android:paddingRight="@dimen/marginBasex6">
+
+                <CustomEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/marginBasex6"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/Email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/black"
+                    android:textSize="@dimen/textMedium"
+                    local:textStyle="Regular" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/marginBasex4"
+                android:layout_marginLeft="@dimen/marginBasex8"
+                android:layout_marginRight="@dimen/marginBasex8"
+                android:layout_marginTop="@dimen/marginBasex4"
+                android:background="@drawable/btn_green_fill"
+                local:MvxBind="Click SendMyPasswordCommand">
+
+                <CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal"
+                    android:text="@string/SendMyPassword"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textMedium"
+                    local:textStyle="Bold" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/marginBasex2"
+                android:layout_marginTop="@dimen/marginBasex2"
+                android:src="@drawable/ic_black_close"
+                local:MvxBind="Click CancelForgotPasswordCommand"></ImageView>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"></View>
+    </LinearLayout>
+
+  <CustomTextView
+        android:id="@+id/tvCreateAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/marginBasex5"
+        android:text="@string/CreateAccount"
+        android:textColor="@color/Green"
+        android:textSize="@dimen/textMedium"
+        local:textStyle="Bold"
+        android:focusable="true"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        local:MvxBind="Click RegisterCommand"/>
+
+  <CustomTextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/tvCreateAccount"
+      android:layout_centerHorizontal="true"
+      android:layout_marginBottom="@dimen/marginBase"
+      android:text="@string/DoNotHaveAnAccount"
+      android:textColor="@color/Grey"
+      android:textSize="@dimen/textMedium"
+      local:textStyle="Regular" />
+</RelativeLayout>

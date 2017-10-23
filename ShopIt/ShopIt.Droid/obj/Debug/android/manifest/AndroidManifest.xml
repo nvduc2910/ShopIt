@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.ShopIt.droid" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
+  <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="21" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-permission android:name="com.ShopIt.droid.permission.C2D_MESSAGE" />
+  <permission android:name="com.ShopIt.droid.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+  <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+  <uses-feature android:name="android.hardware.camera" android:required="true" />
+  <permission android:name="com.ShopIt.droid.permission.C2D_MESSAGE" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+  <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+  <application android:label="ShopIt" android:theme="@style/AppTheme" android:icon="@drawable/appicon" android:largeHeap="true" android:name="md509626ab9b9b075bfe145eef480fbc4b2.ShopItApplication" android:allowBackup="true" android:debuggable="true">
+    <activity android:launchMode="singleTask" android:screenOrientation="portrait" android:theme="@style/AppTheme" android:windowSoftInputMode="stateUnspecified|adjustResize" android:name="md510b4f97ca76eaccd593e85752463ac2c.AboutView" />
+    <activity android:launchMode="singleTask" android:screenOrientation="portrait" android:theme="@style/AppTheme" android:windowSoftInputMode="stateUnspecified|adjustResize" android:name="md510b4f97ca76eaccd593e85752463ac2c.DocumentDetailsView" />
+    <activity android:launchMode="singleTask" android:screenOrientation="portrait" android:theme="@style/AppTheme" android:windowSoftInputMode="stateUnspecified|adjustResize" android:name="md510b4f97ca76eaccd593e85752463ac2c.EditProfileView" />
+    <activity android:launchMode="singleTask" android:screenOrientation="sensorPortrait" android:theme="@style/AppTheme" android:windowSoftInputMode="stateUnspecified|adjustResize" android:name="md510b4f97ca76eaccd593e85752463ac2c.ViewProfileView" />
+    <activity android:launchMode="singleTask" android:screenOrientation="portrait" android:theme="@style/AppTheme" android:windowSoftInputMode="stateUnspecified|adjustResize" android:name="md510b4f97ca76eaccd593e85752463ac2c.CreateCompanyProfileView" />
+    <activity android:launchMode="singleTask" android:screenOrientation="portrait" android:theme="@style/AppTheme" android:windowSoftInputMode="stateUnspecified|adjustResize" android:name="md510b4f97ca76eaccd593e85752463ac2c.CreatePersonalProfileView" />
+    <activity android:launchMode="singleTask" android:screenOrientation="sensorPortrait" android:theme="@style/AppTheme" android:windowSoftInputMode="stateUnspecified|adjustResize" android:name="md510b4f97ca76eaccd593e85752463ac2c.EditProjectView" />
+    <activity android:launchMode="singleTask" android:screenOrientation="sensorPortrait" android:theme="@style/AppTheme" android:windowSoftInputMode="stateUnspecified|adjustResize" android:name="md510b4f97ca76eaccd593e85752463ac2c.ViewProjectView" />
+    <activity android:launchMode="singleTask" android:screenOrientation="portrait" android:theme="@style/AppTheme" android:windowSoftInputMode="stateUnspecified|adjustResize" android:name="md510b4f97ca76eaccd593e85752463ac2c.DescriptionProjectView" />
+    <activity android:launchMode="singleTask" android:screenOrientation="portrait" android:theme="@style/AppTheme" android:windowSoftInputMode="stateUnspecified|adjustResize" android:name="md510b4f97ca76eaccd593e85752463ac2c.CreateProjectView" />
+    <activity android:launchMode="singleTask" android:screenOrientation="portrait" android:theme="@style/AppTheme" android:windowSoftInputMode="stateUnspecified|adjustPan" android:name="md510b4f97ca76eaccd593e85752463ac2c.AlertInviteView" />
+    <activity android:launchMode="singleTask" android:screenOrientation="portrait" android:theme="@style/AppTheme" android:name="md510b4f97ca76eaccd593e85752463ac2c.AlertDetailView" />
+    <activity android:launchMode="singleTask" android:screenOrientation="sensorPortrait" android:theme="@style/AppTheme" android:name="md510b4f97ca76eaccd593e85752463ac2c.LocalWebView" />
+    <activity android:launchMode="singleTask" android:screenOrientation="sensorPortrait" android:theme="@style/AppTheme" android:name="md510b4f97ca76eaccd593e85752463ac2c.SignUpView" />
+    <activity android:launchMode="singleTask" android:screenOrientation="portrait" android:theme="@style/AppTheme" android:windowSoftInputMode="stateAlwaysHidden|adjustPan" android:name="md510b4f97ca76eaccd593e85752463ac2c.MainView" />
+    <activity android:launchMode="singleTask" android:screenOrientation="sensorPortrait" android:theme="@style/AppTheme" android:windowSoftInputMode="stateAlwaysHidden|adjustUnspecified" android:name="md510b4f97ca76eaccd593e85752463ac2c.LoginView" />
+    <activity android:launchMode="singleTask" android:noHistory="true" android:screenOrientation="sensorPortrait" android:theme="@style/AppTheme" android:name="md510b4f97ca76eaccd593e85752463ac2c.TourView" />
+    <activity android:launchMode="singleTop" android:noHistory="true" android:screenOrientation="sensorPortrait" android:theme="@style/AppTheme" android:name="md510b4f97ca76eaccd593e85752463ac2c.SplashView">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <receiver android:permission="com.google.android.c2dm.permission.SEND" android:name="md5af7c8af9efa38fe79bc3fbd9cd09a7b9.GcmBroadcastReceiver">
+      <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+        <category android:name="com.ShopIt.droid" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+        <category android:name="com.ShopIt.droid" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="com.google.android.gcm.intent.RETRY" />
+        <category android:name="com.ShopIt.droid" />
+      </intent-filter>
+    </receiver>
+    <service android:name="md5af7c8af9efa38fe79bc3fbd9cd09a7b9.GcmService" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.ShopIt.droid.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.com.ShopIt.droid" />
+      </intent-filter>
+    </receiver>
+    <!--
+             to support 2.2 (Froyo) and older devices, your application should allow fallback
+             to HTTP if modern HTTPS certificates aren't supported.
+        -->
+    <!--
+        <meta-data android:name="com.mixpanel.android.MPConfig.DisableFallback"
+            android:value="false" />
+        -->
+    <!--
+             The Mixpanel library will automatically attempt to show available surveys or in
+             app notifications every time a new Activity is displayed. To disable this behavior,
+             add the following line. The default value for this option is set to true.
+        -->
+    <!--
+        <meta-data android:name="com.mixpanel.android.MPConfig.AutoShowMixpanelUpdates"
+            android:value="false" />
+        -->
+    <!--
+             Set this option to true if you wish for in-app notifications and surveys to be displayed without
+             being tracked by Mixpanel. This is useful for testing the integration with your Android app.
+             The default value is false.
+        -->
+    <!--
+        <meta-data android:name="com.mixpanel.android.MPConfig.TestMode"
+            android:value="true" />
+        -->
+    <!--
+             Set the following option to true if you wish to see the debug output from the Mixpanel Android
+             library. This may be useful in determining when track calls go out or in-app notifications or
+             surveys are fetched. The default value is false.
+        -->
+    <!--
+        <meta-data android:name="com.mixpanel.android.MPConfig.EnableDebugLogging"
+            android:value="true" />
+        -->
+    <!--
+             This activity allows your application to show Mixpanel surveys and takeover in-app notifications.
+             If you only wish to show mini in-app notifications, you do not need to declare this Activity.
+             You may also specify a different theme to better fit the look and feel of your application.
+        -->
+    <!--
+        <activity android:name="com.mixpanel.android.surveys.SurveyActivity"
+                  android:theme="@style/com_mixpanel_android_SurveyActivityTheme" />
+        -->
+    <!--
+             This receiver will allow your application to register for and receive Mixpanel push notifications.
+             Make sure to change YOUR_PACKAGE_NAME to your own applications package.
+        -->
+    <!--
+        <receiver android:name="com.mixpanel.android.mpmetrics.GCMReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="YOUR_PACKAGE_NAME" />
+            </intent-filter>
+        </receiver>
+        -->
+    <!-- This receiver will allow your application to record referrer parameters as super properties automatically -->
+    <!--
+        <receiver android:name="com.mixpanel.android.mpmetrics.InstallReferrerReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        -->
+    <!--
+             to support 2.2 (Froyo) and older devices, your application should allow fallback
+             to HTTP if modern HTTPS certificates aren't supported.
+        -->
+    <!--
+        <meta-data android:name="com.mixpanel.android.MPConfig.DisableFallback"
+            android:value="false" />
+        -->
+    <!--
+             The Mixpanel library will automatically attempt to show available surveys or in
+             app notifications every time a new Activity is displayed. To disable this behavior,
+             add the following line. The default value for this option is set to true.
+        -->
+    <!--
+        <meta-data android:name="com.mixpanel.android.MPConfig.AutoShowMixpanelUpdates"
+            android:value="false" />
+        -->
+    <!--
+             Set this option to true if you wish for in-app notifications and surveys to be displayed without
+             being tracked by Mixpanel. This is useful for testing the integration with your Android app.
+             The default value is false.
+        -->
+    <!--
+        <meta-data android:name="com.mixpanel.android.MPConfig.TestMode"
+            android:value="true" />
+        -->
+    <!--
+             Set the following option to true if you wish to see the debug output from the Mixpanel Android
+             library. This may be useful in determining when track calls go out or in-app notifications or
+             surveys are fetched. The default value is false.
+        -->
+    <!--
+        <meta-data android:name="com.mixpanel.android.MPConfig.EnableDebugLogging"
+            android:value="true" />
+        -->
+    <!--
+             This activity allows your application to show Mixpanel surveys and takeover in-app notifications.
+             If you only wish to show mini in-app notifications, you do not need to declare this Activity.
+             You may also specify a different theme to better fit the look and feel of your application.
+        -->
+    <!--
+        <activity android:name="com.mixpanel.android.surveys.SurveyActivity"
+                  android:theme="@style/com_mixpanel_android_SurveyActivityTheme" />
+        -->
+    <!--
+             This receiver will allow your application to register for and receive Mixpanel push notifications.
+             Make sure to change YOUR_PACKAGE_NAME to your own applications package.
+        -->
+    <!--
+        <receiver android:name="com.mixpanel.android.mpmetrics.GCMReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="YOUR_PACKAGE_NAME" />
+            </intent-filter>
+        </receiver>
+        -->
+    <!-- This receiver will allow your application to record referrer parameters as super properties automatically -->
+    <!--
+        <receiver android:name="com.mixpanel.android.mpmetrics.InstallReferrerReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        -->
+    <!--
+             to support 2.2 (Froyo) and older devices, your application should allow fallback
+             to HTTP if modern HTTPS certificates aren't supported.
+        -->
+    <!--
+        <meta-data android:name="com.mixpanel.android.MPConfig.DisableFallback"
+            android:value="false" />
+        -->
+    <!--
+             The Mixpanel library will automatically attempt to show available surveys or in
+             app notifications every time a new Activity is displayed. To disable this behavior,
+             add the following line. The default value for this option is set to true.
+        -->
+    <!--
+        <meta-data android:name="com.mixpanel.android.MPConfig.AutoShowMixpanelUpdates"
+            android:value="false" />
+        -->
+    <!--
+             Set this option to true if you wish for in-app notifications and surveys to be displayed without
+             being tracked by Mixpanel. This is useful for testing the integration with your Android app.
+             The default value is false.
+        -->
+    <!--
+        <meta-data android:name="com.mixpanel.android.MPConfig.TestMode"
+            android:value="true" />
+        -->
+    <!--
+             Set the following option to true if you wish to see the debug output from the Mixpanel Android
+             library. This may be useful in determining when track calls go out or in-app notifications or
+             surveys are fetched. The default value is false.
+        -->
+    <!--
+        <meta-data android:name="com.mixpanel.android.MPConfig.EnableDebugLogging"
+            android:value="true" />
+        -->
+    <!--
+             This activity allows your application to show Mixpanel surveys and takeover in-app notifications.
+             If you only wish to show mini in-app notifications, you do not need to declare this Activity.
+             You may also specify a different theme to better fit the look and feel of your application.
+        -->
+    <!--
+        <activity android:name="com.mixpanel.android.surveys.SurveyActivity"
+                  android:theme="@style/com_mixpanel_android_SurveyActivityTheme" />
+        -->
+    <!--
+             This receiver will allow your application to register for and receive Mixpanel push notifications.
+             Make sure to change YOUR_PACKAGE_NAME to your own applications package.
+        -->
+    <!--
+        <receiver android:name="com.mixpanel.android.mpmetrics.GCMReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="YOUR_PACKAGE_NAME" />
+            </intent-filter>
+        </receiver>
+        -->
+    <!-- This receiver will allow your application to record referrer parameters as super properties automatically -->
+    <!--
+        <receiver android:name="com.mixpanel.android.mpmetrics.InstallReferrerReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        -->
+  </application>
+</manifest>

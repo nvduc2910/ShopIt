@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_sub_page"
+    android:orientation="vertical">
+
+  <!--Top bar-->
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/marginBasex10"
+      android:background="@drawable/bg_header"
+      android:paddingTop="@dimen/marginBasex2">
+
+    <CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/AlertDetails"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textMedium"
+        local:textStyle="Regular" />
+
+    <ImageView
+        android:layout_width="@dimen/marginBasex10"
+        android:layout_height="@dimen/marginBasex10"
+        android:padding="@dimen/marginBasex2"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/marginBase"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_white_back_arrow"
+        local:MvxBind="Click GoBackCommand" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/marginBasex2"
+        android:scaleType="fitCenter"
+        android:visibility="invisible"
+        android:src="@drawable/ic_white_send" />
+
+  </RelativeLayout>
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="@dimen/marginBasex2"
+      android:layout_marginTop="@dimen/marginBasex3"
+      android:orientation="horizontal">
+
+    <!--<CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/marginBasex2"
+        android:text="@string/AlertTitle"
+        android:textColor="@color/Green"
+        android:textSize="@dimen/textMediumSmall"
+        local:textStyle="Bold" />-->
+
+    <CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/Green"
+        android:textSize="@dimen/textSmall"
+        local:MvxBind="Text AlertItem.Alert.Title"
+        local:textStyle="Regular" />
+  </LinearLayout>
+
+  <CustomTextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:layout_marginLeft="@dimen/marginBasex2"
+      android:layout_marginRight="@dimen/marginBasex2"
+      android:layout_marginTop="@dimen/marginBasex3"
+      android:textColor="@android:color/black"
+      android:textSize="@dimen/textSmall"
+      local:MvxBind="Text AlertItem.Alert.Body"
+      local:textStyle="Regular" />
+
+</LinearLayout>

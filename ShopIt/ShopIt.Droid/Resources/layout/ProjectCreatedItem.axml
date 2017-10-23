@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/corner_shape"
+    android:orientation="vertical"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:layout_marginBottom="@dimen/marginBasex2"
+    android:paddingBottom="@dimen/marginBasex2"
+    android:paddingLeft="@dimen/marginBasex2"
+    android:paddingRight="@dimen/marginBasex2"
+    android:paddingTop="@dimen/marginBasex2">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/Green"
+        android:textSize="@dimen/textMediumSmall"
+        local:textStyle="Regular" 
+        local:MvxBind="Text ProjectHeading.Title"/>
+
+    <CustomImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_project_check"
+        local:MvxBind="IsChecked ProjectHeading.Alert"/>
+  </RelativeLayout>
+
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/marginBasex2"
+      android:layout_marginTop="@dimen/marginBase"
+      android:src="@drawable/divider_line" />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/marginBasex2"
+      android:orientation="horizontal">
+
+    <CustomTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_weight="1.5"
+        android:text="@string/CreatedOn"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textSmall"
+        local:textStyle="Regular" />
+
+    <CustomTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_weight="3"
+        android:textColor="@color/Grey"
+        android:textSize="@dimen/textSmall"
+        local:textStyle="Regular" 
+        local:MvxBind="Text CreatedJoinedText"/>
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <CustomTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_weight="1.5"
+        android:text="@string/Status"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textSmall"
+        local:textStyle="Regular" />
+
+    <CustomTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_weight="3"
+        android:textColor="@color/Grey"
+        android:textSize="@dimen/textSmall"
+        local:textStyle="Regular" 
+        local:MvxBind="Text ProjectHeading.Stage"/>
+  </LinearLayout>
+
+</LinearLayout>

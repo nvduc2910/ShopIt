@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <Button
+        android:text="Leave Breadcrumb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ButtonBreadcrumb" />
+    <Button
+        android:text="Set Username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ButtonSetUserName" />
+    <Button
+        android:text="Set Metadata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ButtonSetMetadata" />
+    <Button
+        android:text="Crash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ButtonCrash" />
+    <Button
+        android:text="Handled Exception"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ButtonHandledException" />
+    <Button
+        android:text="Log Network Request"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ButtonLogNetworkRequest" />
+    <Button
+        android:text="Begin Transaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ButtonBeginTransaction" />
+    <Button
+        android:text="End Transaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ButtonEndTransaction" />
+    <Button
+        android:text="Fail Transaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ButtonFailTransaction" />
+    <Button
+        android:text="Set Transaction Value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ButtonSetTransactionValue" />
+    <Button
+        android:text="Get Transaction Value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ButtonGetTransactionValue" />
+</LinearLayout>

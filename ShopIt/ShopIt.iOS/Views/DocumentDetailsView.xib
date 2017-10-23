@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DocumentDetailsView">
+            <connections>
+                <outlet property="btnClose" destination="EU1-bK-88P" id="XxG-Ic-9UY"/>
+                <outlet property="btnDelete" destination="gxJ-Bj-zMz" id="dUC-Ea-kx4"/>
+                <outlet property="ivPhotoDocument" destination="uRJ-eF-SCx" id="6zp-o0-SXN"/>
+                <outlet property="lbTitile" destination="2du-Ql-gsp" id="oi7-Ge-ER7"/>
+                <outlet property="sclMain" destination="HUG-ZP-cXf" id="jgC-y4-0ze"/>
+                <outlet property="view" destination="4ZX-01-kh2" id="JCh-rc-oty"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="4ZX-01-kh2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfc-sx-Vzd">
+                    <rect key="frame" x="0.0" y="24" width="375" height="47"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxJ-Bj-zMz">
+                            <rect key="frame" x="0.0" y="0.0" width="80" height="47"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="Dzg-hs-77o"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                            <inset key="titleEdgeInsets" minX="14" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="Delete">
+                                <color key="titleColor" red="0.0" green="0.76078431369999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EU1-bK-88P">
+                            <rect key="frame" x="326" y="0.0" width="49" height="47"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="49" id="3q0-7g-Y5e"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" image="Close-green"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Document 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2du-Ql-gsp">
+                            <rect key="frame" x="80" y="14" width="215" height="20.5"/>
+                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.76078431369999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47" id="7eo-Az-CfP"/>
+                        <constraint firstItem="gxJ-Bj-zMz" firstAttribute="top" secondItem="rfc-sx-Vzd" secondAttribute="top" id="86W-iW-5IZ"/>
+                        <constraint firstItem="gxJ-Bj-zMz" firstAttribute="leading" secondItem="rfc-sx-Vzd" secondAttribute="leading" id="C3t-G5-hXU"/>
+                        <constraint firstAttribute="bottom" secondItem="gxJ-Bj-zMz" secondAttribute="bottom" id="KQ6-KG-EpV"/>
+                        <constraint firstItem="2du-Ql-gsp" firstAttribute="leading" secondItem="gxJ-Bj-zMz" secondAttribute="trailing" id="V8F-Sj-Z18"/>
+                        <constraint firstItem="2du-Ql-gsp" firstAttribute="centerY" secondItem="rfc-sx-Vzd" secondAttribute="centerY" id="XJr-FX-hfj"/>
+                        <constraint firstAttribute="bottom" secondItem="EU1-bK-88P" secondAttribute="bottom" id="hLj-ki-vXt"/>
+                        <constraint firstItem="2du-Ql-gsp" firstAttribute="centerX" secondItem="rfc-sx-Vzd" secondAttribute="centerX" id="lil-ye-hKt"/>
+                        <constraint firstItem="EU1-bK-88P" firstAttribute="top" secondItem="rfc-sx-Vzd" secondAttribute="top" id="prA-bq-paw"/>
+                        <constraint firstAttribute="trailing" secondItem="EU1-bK-88P" secondAttribute="trailing" id="rxc-9h-v5c"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HUG-ZP-cXf">
+                    <rect key="frame" x="0.0" y="71" width="375" height="596"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_add_photo" translatesAutoresizingMaskIntoConstraints="NO" id="uRJ-eF-SCx" customClass="BindableUrlUIImageView">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="596"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="uRJ-eF-SCx" firstAttribute="leading" secondItem="HUG-ZP-cXf" secondAttribute="leading" id="2d2-fw-boy"/>
+                        <constraint firstAttribute="bottom" secondItem="uRJ-eF-SCx" secondAttribute="bottom" id="IrS-aP-vOe"/>
+                        <constraint firstItem="uRJ-eF-SCx" firstAttribute="centerX" secondItem="HUG-ZP-cXf" secondAttribute="centerX" id="fKX-ME-KFu"/>
+                        <constraint firstAttribute="trailing" secondItem="uRJ-eF-SCx" secondAttribute="trailing" id="ffN-R1-poZ"/>
+                        <constraint firstItem="uRJ-eF-SCx" firstAttribute="top" secondItem="HUG-ZP-cXf" secondAttribute="top" id="lq4-3t-6QZ"/>
+                        <constraint firstItem="uRJ-eF-SCx" firstAttribute="centerY" secondItem="HUG-ZP-cXf" secondAttribute="centerY" id="pIS-gD-WTK"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="rfc-sx-Vzd" secondAttribute="trailing" id="2Ff-ad-lkD"/>
+                <constraint firstItem="HUG-ZP-cXf" firstAttribute="top" secondItem="rfc-sx-Vzd" secondAttribute="bottom" id="aGc-2j-Ps9"/>
+                <constraint firstItem="HUG-ZP-cXf" firstAttribute="leading" secondItem="4ZX-01-kh2" secondAttribute="leading" id="cBs-q0-p27"/>
+                <constraint firstItem="rfc-sx-Vzd" firstAttribute="leading" secondItem="4ZX-01-kh2" secondAttribute="leading" id="cKI-eh-SXA"/>
+                <constraint firstItem="rfc-sx-Vzd" firstAttribute="top" secondItem="4ZX-01-kh2" secondAttribute="top" constant="24" id="iox-4V-JZT"/>
+                <constraint firstAttribute="trailing" secondItem="HUG-ZP-cXf" secondAttribute="trailing" id="zAb-by-GAW"/>
+                <constraint firstAttribute="bottom" secondItem="HUG-ZP-cXf" secondAttribute="bottom" id="zXL-y2-WEj"/>
+            </constraints>
+            <point key="canvasLocation" x="-434" y="3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Close-green" width="21" height="21"/>
+        <image name="ic_add_photo" width="140" height="139"/>
+    </resources>
+</document>

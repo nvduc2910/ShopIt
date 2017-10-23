@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_grey"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+  <!--Top bar-->
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/marginBasex10"
+      android:layout_marginTop="@dimen/marginBasex2">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/marginBasex3"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_logo" />
+
+    <ImageView
+        android:layout_width="@dimen/marginBasex10"
+        android:layout_height="@dimen/marginBasex10"
+        android:padding="@dimen/marginBasex2"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/marginBase"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_green_menu"
+        local:MvxBind="Click ShowMenuCommand" />
+
+  </RelativeLayout>
+
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/marginBasex4"
+      android:src="@drawable/divider_line" />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/marginBasex2"
+      android:background="@drawable/corner_shape"
+      android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="@dimen/marginBase"
+        android:layout_marginRight="@dimen/marginBasex2"
+        android:layout_marginTop="@dimen/marginBasex2"
+        android:src="@drawable/ic_project_check" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/marginBasex7"
+        android:src="@drawable/divider_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <!--Create Profile-->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          local:MvxBind="Visible IsShowViewProfileView,Converter=ReverseBoolConverter">
+
+        <CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/marginBasex5"
+            android:gravity="center_horizontal"
+            android:text="@string/GetStartedByCreatingYourProfile"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textMediumLarge"
+            local:textStyle="Regular" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/marginBasex5"
+            android:src="@drawable/btn_create_profile"
+            local:MvxBind="Click CreateProfileCommand"/>
+      </LinearLayout>
+
+      <!--View Profile-->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          local:MvxBind="Visible IsShowViewProfileView">
+
+        <CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/marginBasex5"
+            android:gravity="center_horizontal"
+            android:text="@string/TapToViewOrEditYourProfile"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textMediumLarge"
+            local:textStyle="Regular" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/marginBasex5"
+            android:src="@drawable/btn_view_profile" 
+            local:MvxBind="Click ViewProfileCommand"/>
+      </LinearLayout>
+      
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        local:MvxBind="Visible IsShowViewProfileView,Converter=ReverseBoolConverter">
+        <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginBottom="@dimen/marginBasex4"
+          android:src="@drawable/ic_share_gray"/>
+
+        <CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/marginBasex2"
+            android:gravity="center_horizontal"
+            android:text="@string/ShareProfile"
+            android:textColor="@color/Grey"
+            android:textSize="@dimen/textSmall"
+            local:textStyle="Regular" />
+      </LinearLayout>
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        local:MvxBind="Visible IsShowViewProfileView">
+        <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginBottom="@dimen/marginBasex4"
+          android:src="@drawable/ic_cricle_share"
+          local:MvxBind="Click ShareProfileCommand"/>
+
+        <CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/marginBasex2"
+            android:gravity="center_horizontal"
+            android:text="@string/ShareProfile"
+            android:textColor="@color/Green"
+            android:textSize="@dimen/textSmall"
+            local:textStyle="Regular" />
+      </LinearLayout>
+    </FrameLayout>
+    
+    
+  </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_grey"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/marginBasex3">
+
+  <!--Top bar-->
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/marginBasex10"
+      android:layout_marginTop="@dimen/marginBasex2">
+
+    <CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/Green"
+        android:textSize="@dimen/textMedium"
+        android:text="@string/Projects"
+        local:textStyle="Regular" />
+
+    <ImageView
+        android:layout_width="@dimen/marginBasex10"
+        android:layout_height="@dimen/marginBasex10"
+        android:padding="@dimen/marginBasex2"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/marginBase"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_green_menu"
+        local:MvxBind="Click ShowMenuCommand" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/marginBasex3"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_green_add"
+        local:MvxBind="Click AddProjectCommand" />
+
+  </RelativeLayout>
+
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/marginBasex3"
+      android:src="@drawable/divider_line" />
+  <android.support.v4.widget.SwipeRefreshLayout
+      android:id="@+id/refresher"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" >
+      <MvxLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/marginBasex2"
+        android:layout_marginRight="@dimen/marginBasex2"
+        android:orientation="vertical">
+
+        <CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/marginBasex2"
+            android:layout_marginLeft="@dimen/marginBasex2"
+            android:text="@string/ProjectsCreated"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSmall"
+            local:textStyle="Regular" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/marginBasex2">
+
+          <MvxClickableLinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              local:MvxBind="ItemsSource ProjectsCreated;ItemClick SelectProjectItemCommand"
+              android:layout_marginLeft="@dimen/marginBasex2"
+              android:layout_marginRight="@dimen/marginBasex2"
+              local:MvxItemTemplate="@layout/projectcreateditem"/>
+
+          <CustomTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerInParent="true"
+              android:text="@string/YouHaveNotCreatedAnyProjects"
+              android:textColor="@color/Grey"
+              android:textSize="@dimen/textSmall"
+              local:textStyle="Regular"
+              local:MvxBind="Visible HaveProjectsCreated,Converter=ReverseBoolConverter"/>
+        </RelativeLayout>
+
+        <CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/marginBasex2"
+            android:text="@string/ProjectsJoined"
+            android:layout_marginLeft="@dimen/marginBasex2"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSmall"
+            local:textStyle="Regular" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/marginBasex2">
+
+          <MvxClickableLinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:layout_marginLeft="@dimen/marginBasex2"
+              android:layout_marginRight="@dimen/marginBasex2"
+              local:MvxBind="ItemsSource ProjectsJoined;ItemClick SelectProjectItemCommand"
+              local:MvxItemTemplate="@layout/projectinviteditem"/>
+
+          <CustomTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerInParent="true"
+              android:text="@string/YouHaveNotJoinedAnyProjects"
+              android:textColor="@color/Grey"
+              android:textSize="@dimen/textSmall"
+              local:textStyle="Regular"
+              local:MvxBind="Visible HaveProjectsJoined,Converter=ReverseBoolConverter"/>
+        </RelativeLayout>
+
+      </MvxLinearLayout>
+
+    </ScrollView>
+  </android.support.v4.widget.SwipeRefreshLayout>
+  
+    
+</LinearLayout>
